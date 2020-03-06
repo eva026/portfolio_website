@@ -1,0 +1,148 @@
+@media(max-width: 800px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content {
+      padding-top: 4rem;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  #home-a .specials,
+  #home-b .stats, 
+  #home-c .process,
+  #about-d .testimonials,
+  #contact-b .contact-info,
+  .items {
+    grid-template-columns: 1fr;
+  }
+  #main-footer {
+    height: 7rem;
+    .footer-content {
+    flex-direction: column;
+    justify-content: center;  
+      p {
+        margin-bottom: 0.6rem;
+      }
+    }
+  }
+
+#main-nav {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    padding: 0.4rem 1rem;
+  }
+  img {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    align-self: center;
+   
+  }
+  a {
+    padding-bottom: 0.2rem;
+  }
+}
+
+  #header {
+    &-home {
+      text-align: center;
+      background-position: 20% 30%;
+      height: 5.5rem;
+      border-bottom: 3px $main-color solid;
+      
+      .header-content {
+        display: none;
+      }
+    }
+  }
+
+  #home {
+    &-a {
+      .specials { 
+        div {
+          border-bottom: 1px rgb(235, 231, 231) solid;
+          padding: 1rem;
+
+          &:last-child {
+            border-bottom: none;
+            padding-bottom: none;
+          }
+        }
+      }
+    }
+
+    &-b {
+      .stats {
+        div {
+          padding: 5rem 0;
+        }
+      }
+    }
+  }
+
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas: 
+        'bioimg'
+        'bio'
+        'aw-1'
+        'aw-2'
+        'aw-3';
+      
+      .award-1, 
+      .award-2 {
+        border-bottom: 1px rgb(223, 221, 221) solid;
+        padding-bottom: 1rem;
+      }
+      }
+    }
+    &-c {
+      display: none;
+    }
+  }
+
+#contact {
+  &-a {
+    .text-fields {
+      grid-template-areas: 
+      'name'
+      'subject'
+      'email'
+      'phone'
+      'message'
+    }
+  }
+  &-b {
+    .contact-info {
+      grid-gap: 1rem;
+      div {
+        border-bottom: 1px #555 solid;
+        padding: 1rem 0;
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: none;
+        }
+      }
+    }
+  }
+  &-c {
+    h2 {
+     font-size: 1.3rem;
+    }
+  }
+}
+}
+
+@media(max-width: 812px) {
+  #header-home {
+    .header-content {
+      padding-top: 10%;
+    }
+  }
+}

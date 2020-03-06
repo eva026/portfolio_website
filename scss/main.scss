@@ -1,0 +1,373 @@
+@import "config";
+@import "utilities";
+@import "item_grid";
+
+// General styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+// Logo
+#logo {
+  width: 70px;
+  height: 70px;
+}
+
+// Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 1rem 1.5rem;
+  }
+  a {
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+    color: #fff;
+    transition: border-color 0.5s;
+    border-bottom: 3px transparent solid;
+    &:hover {
+      border-color: $medium-color;
+    }
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// Header
+#header {
+  // Header Home
+  &-home {
+    background: $bg-image no-repeat center right/cover;
+    height: 100vh;
+    color: #fff;
+
+    // Header Content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  // Header Inner
+  &-inner {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px $main-color solid;
+  }
+}
+
+#home {
+  // Section A
+  &-a {
+    .specials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .fas {
+      color: $main-color;
+    }
+  }
+  // Section B
+  &-b {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      li {
+        &.stas-title {
+          font-size: 1.5rem;
+        }
+        &.stas-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+      div {
+        padding: 2rem 4rem;
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+        &:nth-child(even) {
+          background: $medium-color;
+        }
+      }
+    }
+  }
+  // Section C
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+      // process-step
+      &-step {
+        background: $main-color;
+        font-weight: bold;
+        font-size: 1.8rem;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+        transition: all 1s;
+      }
+      // peocess-icon
+      &-icon {
+        color: #fff;
+        background: $dark-color;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        padding: 2rem;
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          .process-step {
+            background: $dark-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// About
+#about {
+  // About A
+
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        'bioimg bio bio'
+        'aw-1 aw-2 aw-3';
+      grid-gap: 1.2rem;
+    }
+    // Grid Area
+    .bio-img {
+      grid-area: bioimg;
+    }
+    .bio {
+      grid-area: bio;
+      border-left: 2px $main-color solid;
+      padding: 1rem;
+    }
+    .award-1 {
+      grid-area: aw-1;
+    }
+    .award-2 {
+      grid-area: aw-2;
+    }
+    .award-3 {
+      grid-area: aw-3;
+    }
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin-bottom: 1rem;
+    }
+  }
+  // About B
+
+  &-b {
+    .progress {
+      background: $light-color;
+      height: 10px;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+
+      div {
+        background: $main-color;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  // About C
+
+  &-c {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  // About D
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.2rem;
+
+      p {
+        border: 1px rgb(241, 232, 232) solid;
+        border-radius: 5px;
+        padding: 0.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 50px;
+        border-radius: 50%;
+        margin-right: 0.6rem;
+      }
+      
+    }
+  }
+}
+
+// Contact
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas: 
+      'name subject'
+      'email phone'
+      'message message';
+      grid-gap: 1.2rem;
+
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+      }
+      .text-input {
+        padding: 0.5rem;
+      }
+      .message-input {
+        padding: 2rem;
+        height: 100px;
+      }
+      
+    }
+    button[type='submit'] {
+      margin-top: 20px;
+      width: 50%;
+      font-size: 1rem;
+    }
+   
+  }
+
+  // Contact B
+  &-b {
+    margin-top: 2rem;
+    
+    
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    
+    }
+  }
+
+  // Conatct C
+  &-c {
+    h2 {
+     font-size: 2.6rem;
+    }
+  }
+}
+
+
+
+// Footer
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .social .fab {
+      padding: 0.5rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      margin-right: 1rem;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+
+      &:hover{
+        background: $main-color;
+      }
+    }
+  }
+}
+
+@import 'media';
