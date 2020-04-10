@@ -1,6 +1,7 @@
 {
   "name": "portfolio_website",
   "version": "1.0.0",
+  "homepage": "https://eva026.github.io/portfolio_website"
   "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
