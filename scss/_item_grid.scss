@@ -74,7 +74,8 @@
     text-align: cenetr;
     color: #fff;
     transform: translateY(-20%);
-    transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+    transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1),
+      transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
     transition-delay: 300ms;
   }
 
@@ -87,8 +88,11 @@
 
   &-text-title {
     font-size: 2rem;
+    font-weight: 600;
     padding: 0 1rem;
     margin: 5px 0 0 0;
+    color: #fff;
+    text-transform: uppercase;
   }
 
   &-text-category {
